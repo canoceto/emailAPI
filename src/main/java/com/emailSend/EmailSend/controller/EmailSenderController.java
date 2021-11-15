@@ -3,6 +3,7 @@ package com.emailSend.EmailSend.controller;
 import com.emailSend.EmailSend.model.EmailDTO;
 import com.emailSend.EmailSend.service.EmailService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -18,6 +19,11 @@ public class EmailSenderController {
     @PostMapping(path = "object/sendmail")
     public String sendMail(@RequestBody EmailDTO params) {
         emailService.sendEmail(params.emailTo, params.subject, params.txt);
+        return "ok";
+    }
+
+    @GetMapping(path = "status")
+    public String status() {
         return "ok";
     }
 }
