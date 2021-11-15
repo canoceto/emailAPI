@@ -2,7 +2,6 @@ package com.emailSend.EmailSend.controller;
 
 import com.emailSend.EmailSend.model.EmailDTO;
 import com.emailSend.EmailSend.service.EmailService;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
